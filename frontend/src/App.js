@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import '../../static/App.css';
+import './App.css';
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,7 +14,7 @@ function App() {
     const [mealpacks, setMealpacks] = useState([]);
 
     useEffect(() => {
-        fetch('/api/mealpacks/')
+        fetch('http://localhost:8000/api/mealpacks/')
             .then(response => response.json())
             .then(data => {
                 console.log('data is: ', data);
