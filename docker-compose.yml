@@ -23,7 +23,7 @@ services:
   frontend:
     build: ./frontend
     volumes:
-      - react_build:/frontend/build
+      - react_build:/react/build
       - /react/node_modules
     ports:
       - "3000:3000"
