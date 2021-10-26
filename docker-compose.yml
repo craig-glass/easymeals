@@ -23,7 +23,7 @@ services:
   frontend:
     build: ./frontend
     volumes:
-      - react_build:/react/build
+      - react_build:/frontend/build
       - /react/node_modules
     ports:
       - "3000:3000"
@@ -32,7 +32,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/nginx-setup.conf:/etc/nginx/conf.d/default.conf:ro
+      # - ./nginx/nginx-setup.conf:/etc/nginx/conf.d/default.conf:ro
       - react_build:/usr/share/nginx/html/
     depends_on:
       - web
