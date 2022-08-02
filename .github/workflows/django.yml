@@ -48,10 +48,6 @@ jobs:
       run: |
         pip install flake8
         flake8
-    - name: Migrate database
-      run: python manage.py migrate
-      env:
-        DBURL: "postgres://postgres:postgres@localhost:5432/postgres"
     - name: Coverage report
       run: |
         pip install coverage
