@@ -37,6 +37,9 @@ function App() {
                     <Route path="/this">
                         <This mealpacks={mealpacks}/>
                     </Route>
+                    <Route path="/that">
+                        <This mealpacks={mealpacks}/>
+                    </Route>
                 </Switch>
             </Router>
 
