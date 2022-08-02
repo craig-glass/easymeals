@@ -1,5 +1,5 @@
 from django.test import TestCase
-from models import MealPack
+from backend.models import MealPack
 
 
 class MealPackTestCase(TestCase):
