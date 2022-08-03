@@ -72,7 +72,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: Install dependencies, build and test
       - run: |
           cd frontend
           npm ci
