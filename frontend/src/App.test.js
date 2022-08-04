@@ -18,3 +18,9 @@ test('renders logo link', () => {
   const linkElement = screen.getByText('Logo');
   expect(linkElement).toBeInTheDocument();
 });
+
+test('renders a faulty link', () => {
+  render(<App />);
+  const linkElement = screen.getByText('Faulty');
+  expect(linkElement).toBeInTheDocument();
+});
