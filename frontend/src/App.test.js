@@ -6,3 +6,9 @@ test('renders this link', () => {
   const linkElement = screen.getByText('This');
   expect(linkElement).toBeInTheDocument();
 });
+
+test('renders that link', () => {
+  render(<App />);
+  const linkElement = screen.getByText('That');
+  expect(linkElement).toBeInTheDocument();
+});
