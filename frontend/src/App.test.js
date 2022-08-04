@@ -19,8 +19,3 @@ test('renders logo link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('renders a home link', () => {
-  render(<App />);
-  const linkElement = screen.getByText('Home');
-  expect(linkElement).toBeInTheDocument();
-});
