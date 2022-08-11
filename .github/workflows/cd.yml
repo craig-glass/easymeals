@@ -10,6 +10,8 @@ jobs:
   deployment:
     runs-on: self-hosted 
     steps:
+      - name: Change ownership
+        run: chown -R ~/actions-runner/_work
       - name: Checkout main branch 
         uses: actions/checkout@v2
 
