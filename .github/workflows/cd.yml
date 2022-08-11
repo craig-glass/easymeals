@@ -18,4 +18,4 @@ jobs:
           su - craig 
           cd ~/actions-runner/_work/easymeals/easymeals 
           sudo docker-compose up -d 
-          chown -R craig ~/actions-runner/_work 
+          sudo chown -R craig ~/actions-runner/_work 
