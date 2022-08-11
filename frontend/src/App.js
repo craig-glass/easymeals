@@ -31,7 +31,7 @@ function App() {
                     <Link to="/that">That</Link>
 
                 </header>
-                <div><h1>Testing testing testing</h1></div>
+                <div><h1>Testing testing</h1></div>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/this">
