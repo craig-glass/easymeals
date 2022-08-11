@@ -13,5 +13,7 @@ jobs:
       - name: Checkout main branch 
         uses: actions/checkout@v2
 
-      - name: Build docker containers
-        run: echo "success!!"
+      - name: Build and run docker containers
+        run: |
+          cd ~/actions-runner/_work/easymeals/easymeals 
+          docker-compose up 
