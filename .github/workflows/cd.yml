@@ -17,5 +17,6 @@ jobs:
         run: |
           su - craig 
           chown -R craig ~/actions-runner/_work
+          chmod -R 700 ~/actions-runner/_work 
           cd ~/actions-runner/_work/easymeals/easymeals 
           docker-compose up 
