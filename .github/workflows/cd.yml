@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout main branch 
         uses: actions/checkout@v2
-        with:
-          clean: false 
 
       - name: Build and run docker containers
         run: |
