@@ -15,7 +15,7 @@ jobs:
         python-version: [ 3.10.0 ]
 
     services:
-      postgres:
+      db:
         image: postgres:latest
 
         env:
