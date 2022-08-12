@@ -43,7 +43,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run migrations
-      run: python manage.py migrate --database dev
+      run: python manage.py migrate 
     - name: Lint with flake8
       run: |
         pip install flake8
@@ -51,7 +51,7 @@ jobs:
     - name: Coverage report
       run: |
         pip install coverage
-        coverage run manage.py test --database dev
+        coverage run manage.py test 
         coverage report
     - name: Run Django Tests
       run: |
