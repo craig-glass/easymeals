@@ -12,11 +12,13 @@ jobs:
     steps:
       - name: Checkout main branch 
         uses: actions/checkout@v2
+        with:
+          clean: false 
 
       - name: Build and run docker containers
         run: |
           su - craig 
           cd ~/actions-runner/_work/easymeals/easymeals 
           sudo docker-compose build 
-          sudo docker-compose up
+          sudo docker-compose up 
           sudo chown -R craig ~/actions-runner/_work 
