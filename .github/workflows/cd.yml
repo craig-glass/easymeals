@@ -17,6 +17,5 @@ jobs:
 
       - name: Build and run docker containers
         run: |
-          su - craig 
-          cd ~/actions-runner/
-          sudo docker-compose up
+          cd ~/root/test-docker/
+          docker-compose up
