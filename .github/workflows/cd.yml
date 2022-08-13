@@ -20,3 +20,4 @@ jobs:
           su - craig 
           cd ~/actions-runner/
           sudo docker-compose up
+          echo success
