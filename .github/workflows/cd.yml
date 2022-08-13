@@ -18,7 +18,5 @@ jobs:
       - name: Build and run docker containers
         run: |
           su - craig 
-          cd ~/actions-runner/_work/easymeals/easymeals 
-          sudo docker-compose build 
+          cd ~/actions-runner/
           sudo docker-compose up
-          sudo chown -R craig ~/actions-runner/_work 
