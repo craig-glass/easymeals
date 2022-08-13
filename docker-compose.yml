@@ -21,7 +21,7 @@ services:
     depends_on:
       - db
   frontend:
-    build: ./frontend
+    image: cglass1982/frontend
     volumes:
       - react_build:/react/build
       - /react/node_modules
