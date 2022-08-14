@@ -5,37 +5,10 @@ on:
     branches:
       - master 
 
-env:
-  DOCKER_USER: ${{secrets.DOCKER_USER}}
-  DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-  REPO_BACKEND: ${{secrets.REPO_BACKEND}}
-  REPO_FRONTEND: ${{secrets.REPO_FRONTEND}}
-
 jobs:
-  push-image-to-docker:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Docker Login
-        run: |
-          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-      - name: Build Docker Image - Backend
-        run: docker build -t $DOCKER_USER/$REPO_BACKEND .     
-
-      - name: Docker Push - Backend
-        run: docker push $DOCKER_USER/$REPO_BACKEND
-
-      - name: Build Docker Image - Frontend
-        run: |
-          cd frontend
-          docker build -t $DOCKER_USER/$REPO_FRONTEND .
-
-      - name: Docker Push - Frontend
-        run: docker push $DOCKER_USER/$REPO_FRONTEND
 
   deployment:
     runs-on: self-hosted 
-    needs: push-image-to-docker
     steps:
       - name: Build and run docker containers
         run: |
