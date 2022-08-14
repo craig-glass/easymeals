@@ -5,7 +5,9 @@ on:
     branches:
       - master 
 
+
 jobs:
+  
 
   deployment:
     runs-on: self-hosted 
@@ -14,5 +16,5 @@ jobs:
         run: |
           su - craig 
           cd ~/actions-runner/easymeals
-          docker-compose pull 
-          docker-compose up -d
+          sudo docker-compose pull 
+          sudo docker-compose up -d
