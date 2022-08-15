@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: Build and run docker containers
         run: |
-          su - craig 
+          sudo su - craig 
           cd ~/actions-runner/easymeals
           sudo docker-compose pull 
           sudo docker-compose up -d
