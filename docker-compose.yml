@@ -13,9 +13,9 @@ services:
       - "5432:5432"
   web:
     image: cglass1982/backend    
-    command: bash -c "python manage.py migrate && gunicorn config.wsgi --bind 0.0.0.0:8000"
     volumes: 
       - ./static:/app/static
+    command: bash -c "python manage.py migrate && gunicorn config.wsgi --bind 0.0.0.0:8000"    
     ports:
       - "8000:8000"
     depends_on:
