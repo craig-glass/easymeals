@@ -4,7 +4,7 @@ services:
   db:
     image: postgres
     volumes:
-      - ./easymeals/data/db:/var/lib/postgresql/data
+      - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
@@ -30,7 +30,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - .easymeals/nginx/nginx-setup.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/nginx-setup.conf:/etc/nginx/conf.d/default.conf
       - react_build:/usr/share/nginx/html/
     depends_on:
       - web
