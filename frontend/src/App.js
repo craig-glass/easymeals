@@ -14,7 +14,7 @@ function App() {
     const [mealpacks, setMealpacks] = useState([]);
 
     useEffect(() => {
-        fetch('http://128.199.62.53:8000/api/mealpacks/')
+        fetch('http://3.8.92.94:8000/api/mealpacks/')
             .then(response => response.json())
             .then(data => {
                 console.log('data is: ', data);
