@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e3ppa0!%m03zin#h!^wpbgk-*@hp%n)r)lyzh)tg_-lv(l)inx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True 
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '128.199.62.53', '3.8.92.94']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '128.199.62.53', '3.8.92.94',]
 
 # Application definition
 
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'easymeals',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'db',
@@ -120,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = "/django_static/"
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
 
@@ -133,9 +133,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://0.0.0.0:3000",
     "http://127.0.0.1",
     "http://127.0.0.1:3000",
-    "http://localhost",
+    "http://localhost:3000",
     "http://128.199.62.53",
     "http://128.199.62.53:3000",
     "http://3.8.92.94",
-    "http://3.8.92.94:3000"
+    "http://3.8.92.94:3000",
 ]
