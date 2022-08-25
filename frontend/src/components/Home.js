@@ -8,6 +8,7 @@ export const Home = () => {
             <div>
                 <h1>This is an app to use for testing CI/CD...!!!</h1>
                 <h1>This is the latest update...!!!</h1>
+                <h2>A new update...</h2>
             </div>
         </div>
     )
